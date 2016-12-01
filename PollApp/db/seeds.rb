@@ -47,6 +47,11 @@ ActiveRecord::Base.transaction do
   Response.create(:choice_id => "9", :user_id => "1")
 
   Response.create(:choice_id => "3", :user_id => "5")
+  #test case where trying to respond to own poll
   Response.create(:choice_id => "5", :user_id => "5")
   Response.create(:choice_id => "8", :user_id => "5")
+
+  #test case where respondent already already_answered
+  Response.create(:choice_id => "7", :user_id => "5")
+
 end

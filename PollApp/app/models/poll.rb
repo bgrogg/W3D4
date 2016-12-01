@@ -1,4 +1,5 @@
 class Poll < ActiveRecord::Base
+  validates :title, presence: true
 
   belongs_to :author,
     primary_key: :id,
